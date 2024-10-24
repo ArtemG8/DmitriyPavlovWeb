@@ -15,13 +15,23 @@ body {
 }
 
 .header-logo {
-    position: relative ;
+
     width: 60%; /* Гибкость – наше всё */
     height: auto;
     object-fit: contain; /* Исключаем искажения пропорций */
     z-index: 1;
-    top: 35px;
-    left: 0px;
+    top: 10px;
+
+}
+
+.logo {
+    position: relative ;
+    width: 25%; /* Гибкость – наше всё */
+    height: auto;
+    object-fit: contain; /* Исключаем искажения пропорций */
+    z-index: 1;
+    top: 5px;
+    left: -50px;
 }
 
 
@@ -65,7 +75,7 @@ body {
 .tg-text { /*текст "мой телеграм"*/
     color: #fff;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 23px;
     font-weight: 700;
 
     transition: color 0.3s linear;
@@ -79,16 +89,16 @@ body {
 
 .tg-img { /*лого тг*/
     position: relative ;
-    width: 6%; /* Гибкость – наше всё */
+    width: 7%; /* Гибкость – наше всё */
     height: auto%;
     object-fit: contain; /* Исключаем искажения пропорций */
     top: 5px;
-    left: 560px;
+    left: 550px;
 
 
 }
 
-.phone-holder {
+.tg-holder {
     display: flex;
     align-items: center;
 
@@ -247,13 +257,13 @@ body {
 }
 
 .history-desc {
-    color: #656363;
+    color: #979797;
     font-size: 30px;
     width: 444px;
     text-align: center;
 }
 
-.history-number {
+.statistics {
     display: flex;
     width: 444px;
     justify-content: center;
@@ -262,6 +272,7 @@ body {
 }
 
 .number-item {
+    font-family: 'Tinos', serif;
     margin-right: 60px;
     text-align: center;
     font-size: 40px;
@@ -281,24 +292,24 @@ body {
     display: flex;
 }
 
-.imgages-1 {
+.images-1 {
     position: relative ;
-    width: 60%; /* Гибкость – наше всё */
+    width: 70%; /* Гибкость – наше всё */
     height: auto;
     object-fit: contain; /* Исключаем искажения пропорций */
     z-index: 1;
     top: 35px;
-    left: 450px;
+    left: 300px;
 }
 
-.imgages-2 {
+.images-2 {
     position: absolute;
     z-index: 999;
     top: -92px;
     left: 383px;
 }
 
-.imgages-3 {
+.images-3 {
     position: absolute;
     z-index: 999;
     top: 246px;
@@ -673,7 +684,7 @@ button {
 
     .history-title,
     .history-desc,
-    .history-number {
+    .statistics {
         width: auto;
     }
 }
@@ -688,7 +699,7 @@ button {
 
     .nav,
     .cart,
-    .phone,
+    .tg,
     .btn {
         display: none;
     }
@@ -749,7 +760,17 @@ button {
 }
 
 
+*,
+*::before, #почитать что это делает
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
+html {
+    scroll-behavior: smooth;
+}
 
 
 
