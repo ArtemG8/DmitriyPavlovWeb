@@ -232,7 +232,7 @@ body {
 
 
 
-.history {
+.history { /*вся вторая страница*/
     background-image: url(bg2.jpg);
     height: 100vh;
     background-repeat: no-repeat;
@@ -254,6 +254,10 @@ body {
 
 .history-title span {
     color: #ffffff;
+}
+
+.history-info {
+    margin-top: 100px;
 }
 
 .history-desc {
@@ -284,6 +288,41 @@ body {
     color: #ffffff;
 }
 
+.social-medias { /*сделать что бы наведение они прыгали*/
+   position: relative;
+   width: 85%;
+   top: 30px;
+   left: 100px
+
+
+}
+
+.logo-1 {
+   position: relative;
+   width: 10%; /* Гибкость – наше всё */
+   height: auto;
+   object-fit: contain; /* Исключаем искажения пропорций */
+   margin-right: 15px;
+
+}
+
+.logo-2 {
+   position: relative;
+   width: 9%; /* Гибкость – наше всё */
+   height: auto;
+   object-fit: contain; /* Исключаем искажения пропорций */
+   margin-right: 15px;
+}
+
+.logo-3 {
+   position: relative;
+   width: 9%; /* Гибкость – наше всё */
+   height: auto;
+   object-fit: contain; /* Исключаем искажения пропорций */
+   margin-right: 15px;
+}
+
+
 .history-images {
     position: relative;
 }
@@ -294,27 +333,16 @@ body {
 
 .images-1 {
     position: relative ;
-    width: 70%; /* Гибкость – наше всё */
+    border-radius: 10px;
+    width: 120%; /* Гибкость – наше всё */
     height: auto;
     object-fit: contain; /* Исключаем искажения пропорций */
     z-index: 1;
-    top: 35px;
-    left: 300px;
+    top: 150px;
+    left: 0px;
 }
 
-.images-2 {
-    position: absolute;
-    z-index: 999;
-    top: -92px;
-    left: 383px;
-}
 
-.images-3 {
-    position: absolute;
-    z-index: 999;
-    top: 246px;
-    left: 481px;
-}
 
 
 
