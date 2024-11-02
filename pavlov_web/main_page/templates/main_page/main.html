@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% load humanize %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -96,11 +97,11 @@
 
                 <div class='statistics'>
                     <div class='number-item'>
-                         <span>Просмотры:</span> 93
+                         <span>Просмотры</span> {{ statistics.viewCount| intcomma  }}
                     </div>
 
                     <div class='number-item'>
-                         <span>Подписчики:</span> 206
+                         <span>Подписчики</span> {{ statistics.subscriberCount }}
                     </div>
 
                 </div>
