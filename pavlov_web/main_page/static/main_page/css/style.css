@@ -182,7 +182,15 @@ body {
     background-color: #CFCFCF;
 }
 
+.body-img {
+    position: relative ;
+    width: 50%; /* Гибкость – наше всё */
+    height: auto%;
+    object-fit: contain; /* Исключаем искажения пропорций */
+    top: -101px;
+    left: 720px;
 
+}
 
 
 .cards-holder {
@@ -233,6 +241,7 @@ body {
 
 
 .history { /*вся вторая страница*/
+    z-index: 1;
     background-image: url(bg2.jpg);
     height: 100vh;
     background-repeat: no-repeat;
