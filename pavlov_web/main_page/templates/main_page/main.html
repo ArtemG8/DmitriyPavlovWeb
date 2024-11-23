@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--    <link rel="icon" href="static/main_page/img/favicon.ico" type="image/x-icon">-->
+    <link rel="icon" href="static/main_page/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'main_page/css/style.css' %}">
     <link rel="stylesheet" href="{% static 'main_page/js/app.js' %}">
     <title>Официальный сайт Дмитрия Павлова</title>
@@ -37,26 +37,7 @@
                     <div><a class='tg-text' href='https://t.me/PavlovDoctor'> Мой Телеграм</a></div>
                 </div>
             </div>
-
-
-
-<!--            <div class='burger-menu'>-->
-
-<!--                <button id='burger'>-->
-<!--                    <img src="static/main_page/img/burger-img.png" alt="">-->
-<!--                </button>-->
-
-<!--                <div id='menu' class='burger-slide disp'> &lt;!&ndash;мобильная&ndash;&gt;-->
-<!--                    <a class='nav-item block' href="@">ГЛАВНАЯ</a>-->
-<!--                    <a class='nav-item block' href="@">МЕНЮ</a>-->
-<!--                    <a class='nav-item block' href="ff">О НАС</a>-->
-<!--                    <a class='nav-item block' href="@">БРОНЬ</a>-->
-<!--                </div>-->
-
-<!--            </div>-->
-
         </div>
-
 
         <div class='header-down'>
             <div class='header-title'>
@@ -72,15 +53,13 @@
                 </section>
 
                 <section class='header-btn2'>
-                    <a href='#aboutme' class='header-button'>Смотрите мои видео</a>
+                    <a href='#aboutvideos' class='header-button'>Смотрите мои видео</a>
                 </section>
-
-
-
             </div>
+
             <div class = 'header-img'>
                     <img class ='body-img' src="static/main_page/img/body.png" alt=" ">
-                </div>
+            </div>
 
 
         </div>
@@ -92,10 +71,10 @@
 
 
 <div class='history'>
-    <section id="aboutme" class="aboutme"></section>
     <div class='container'>
         <div class='history-holder'>
             <div class='history-info'>
+                <section id="aboutme" class="aboutme"></section>
                 <div class='history-title'>
                      <span>История</span>
                 </div>
@@ -136,6 +115,28 @@
     </div>
 
 </div>
+<section id="aboutvideos" class="aboutme"></section>
+<div class = 'videos'>
+
+    <div class="container">
+        <div class="videos-header">
+            Новое видео!
+        </div>
+
+        <div class="videos_frame">
+    <ul class="video-list">
+        {% for video in videos %}
+        <li class="video-item">
+            <iframe class="video-preview" width="280" height="500" src="https://www.youtube.com/embed/{{ video.resourceId.videoId }}" frameborder="0" allowfullscreen></iframe>
+        </li>
+        {% endfor %}
+    </ul>
+        </div>
+    </div>
+</div>
+
+
+
 
 
 

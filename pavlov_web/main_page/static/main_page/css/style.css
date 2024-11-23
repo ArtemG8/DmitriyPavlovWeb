@@ -12,71 +12,36 @@ body {
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
-}
+    display: flex;
 
-.header-logo {
-
-    width: 60%; /* Гибкость – наше всё */
-    height: auto;
-    object-fit: contain; /* Исключаем искажения пропорций */
-    z-index: 1;
-    top: 10px;
 
 }
+
+
 
 .logo {
     position: relative ;
-    width: 25%; /* Гибкость – наше всё */
+    width: 12%; /* Гибкость – наше всё */
     height: auto;
     object-fit: contain; /* Исключаем искажения пропорций */
     z-index: 1;
-    top: 5px;
-    left: -50px;
+    top: 50px;
+    left: -100px;
 }
 
-
-.header-line {
-    padding-top: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.nav-item {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 14px;
-
-    margin-right: 25px;
-
-    transition: color 0.3s linear;
-}
-
-.nav-item:hover {
-    color: #d81d1d;
-}
-
-
-.cart {
-    position: relative;
-
-    border-right: 1px solid #FFFFFF;
-    padding-right: 10px;
-    height: 50px;
-}
-
-.cart-img {
+.tg-holder {
     position: absolute;
-    top: 18px;
-    right: 7px;
-}
+    left: 1200px;
+    top: 40px;
 
+}
 .tg-text { /*текст "мой телеграм"*/
     color: #fff;
     text-decoration: none;
     font-size: 23px;
     font-weight: 700;
+    z-index: 100;
+    position: absolute;
 
     transition: color 0.3s linear;
 }
@@ -89,21 +54,15 @@ body {
 
 .tg-img { /*лого тг*/
     position: relative ;
-    width: 7%; /* Гибкость – наше всё */
+    width: 23%; /* Гибкость – наше всё */
     height: auto%;
     object-fit: contain; /* Исключаем искажения пропорций */
-    top: 5px;
-    left: 550px;
-
-
-}
-
-.tg-holder {
-    display: flex;
-    align-items: center;
-
+    top: 50px;
+    left: -70px;
 
 }
+
+
 
 .button {
     background-color: #ffde00;
@@ -121,6 +80,8 @@ body {
 
 .header-down {
     position: relative;
+    top: 200px;
+
 }
 
 .header-title {
@@ -133,37 +94,19 @@ body {
     position: absolute;
     left: 0;
 
-    margin-top: 222px;
-    margin-bottom: 12px;
+
 }
 
 .header-suptitle {
-    color: #fff;
+    color: #ffffff;
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
+    bottom: 100px;
 
 
 }
 
-.header-suptitle:after {
-    position: absolute;
-    content: '';
-    height: 2px;
-    width: 61px;
-    background-color: #fff;
-    top: 127px;
-    left: 56px;
-}
 
-.header-suptitle:before {
-    position: absolute;
-    content: '';
-    height: 2px;
-    width: 61px;
-    background-color: #fff;
-    top: 127px;
-    left: 308px;
-}
 
 .header-button {
     background-color: #140F0B;
@@ -176,14 +119,13 @@ body {
     border-radius: 30px;
 
 
+
     transition: background-color 0.5s linear;
 }
 
-.header-btn1 {
-
-
-
-
+.button-holder {
+    display: flex;
+    margin-right: 30px;
 
 }
 
@@ -193,11 +135,11 @@ body {
 
 .body-img {
     position: relative ;
-    width: 50%; /* Гибкость – наше всё */
+    width: 62%; /* Гибкость – наше всё */
     height: auto%;
     object-fit: contain; /* Исключаем искажения пропорций */
-    top: -144px;
-    left: 760px;
+    top: -291px;
+    left: 700px;
 
 }
 
@@ -316,14 +258,59 @@ body {
     left: 0px;
 }
 
+.videos {
+    background-image: url(bg2.jpg);
+    z-index: 1;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 0px;
+    padding-bottom: 1px;
+}
 
+.videos-header {
+    color: #fff;
+    text-align: center;
+    font-family: 'Tinos', serif;
+    font-size: 65px;
+    font-weight: 400;
 
+    text-align: center;
+    left: 0;
 
+}
 
+.video-list {
+    display: flex; /* Используем flexbox для горизонтального расположения */
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 30px; /* Убираем отступы */
+    margin: 10px; /* Убираем отступы */
+    justify-content: center; /* Распределяем пространство между элементами */
+}
 
-.black-block {
-    background-image: url(img/black-bg.jpg);
-    padding: 80px 0;
+.video-item {
+    margin-right: 100px; /* Отступ между видео */
+}
+
+.video-item:last-child {
+    margin-right: 0; /* Убираем отступ у последнего элемента */
+}
+
+.video-item iframe {
+    border-radius: 10px; /* Установите желаемое значение радиуса */
+    overflow: hidden; /* Это поможет скрыть любые выступающие части */
+}
+
+.video-preview {
+    border-radius: 10px; /* Скругление углов */
+    transform: translateY(100px); /* Начальная позиция (внизу) */
+    opacity: 0; /* Начальная прозрачность */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Плавный переход */
+}
+
+.video-item.visible .video-preview {
+    transform: translateY(0); /* Конечная позиция (по умолчанию) */
+    opacity: 1; /* Полная видимость */
 }
 
 
@@ -336,128 +323,6 @@ body {
 
 
 
-.disp {
-    display: none;
-}
-
-
-
-@media (max-width: 1500px) {
-
-    .galery-content {
-        display: block;
-    }
-
-    .img-gal,
-    .galery-up,
-    .galery-down {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .img-gal {
-        margin-bottom: 20px;
-    }
-
-    .galery-left {
-        margin-right: 0;
-    }
-
-
-}
-
-
-
-
-@media (max-width: 1300px) {
-
-
-
-
-    .header-title {
-        position: static;
-    }
-
-    .header-suptitle:before,
-    .header-suptitle:after {
-        content: none;
-    }
-
-
-
-
-    .cook-content {
-        display: block;
-    }
-
-    .cook-content img {
-        display: block;
-        margin-right: auto;
-        margin-left: auto;
-        margin-bottom: 30px;
-    }
-
-
-    .block-holder {
-        display: block;
-    }
-
-    .left-title,
-    .left-text,
-    .right-button {
-        text-align: center;
-    }
-
-    .right-button {
-        margin-top: 30px;
-    }
-
-
-
-
-
-
-
-@media (max-width: 1185px) {
-
-    .burger-menu {
-        display: block;
-    }
-
-    .nav,
-    .cart,
-    .tg,
-    .btn {
-        display: none;
-    }
-
-    .header-line {
-        justify-content: space-between;
-    }
-
-
-    .burgers-image {
-        display: none;
-    }
-
-}
-
-
-
-@media (max-width: 1000px) {
-
-    .cards-holder {
-        display: block;
-    }
-
-    .card {
-        width: 100%;
-        margin-top: 30px;
-        padding-bottom: 20px;
-    }
-
-}
 
 
 
@@ -489,7 +354,7 @@ body {
 
 
 *,
-*::before, #почитать что это делает
+*::before,
 *::after {
     padding: 0;
     margin: 0;
@@ -499,7 +364,6 @@ body {
 html {
     scroll-behavior: smooth;
 }
-
 
 
 
